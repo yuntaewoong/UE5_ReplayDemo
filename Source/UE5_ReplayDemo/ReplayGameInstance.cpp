@@ -3,3 +3,23 @@
 
 #include "ReplayGameInstance.h"
 
+UReplayGameInstance::UReplayGameInstance()
+{
+	recordingName = "MyReplay";
+	friendlyRecordingName = "My Replay";
+}
+
+void UReplayGameInstance::StartRecording()
+{
+	StartRecordingReplay(recordingName, friendlyRecordingName);
+}
+
+void UReplayGameInstance::StopRecording()
+{
+	StopRecordingReplay();
+}
+
+void UReplayGameInstance::StartReplay()
+{
+	PlayReplay(recordingName, nullptr);
+}
